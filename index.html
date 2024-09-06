@@ -23,23 +23,7 @@
         <video class="vdo" src="./video/1.mp4" controls="true"></video>
         <img onclick="closeTrailer()" class="close" src="./img/cls.webp" alt="">
     </div>
-    <script>
-            var video = document.querySelector("video")
-        function toggle() {
-            var trailer = document.querySelector(".trailer");
-            trailer.style.visibility = 'visible';
-            trailer.style.opacity = '1';
-            video.play();
-            video.currentTime = 0;
-        }
-
-        function closeTrailer() {
-            var trailer = document.querySelector(".trailer");
-            trailer.style.visibility = 'hidden';
-            trailer.style.opacity = '0';
-            video.pause();
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
