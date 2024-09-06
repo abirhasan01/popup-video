@@ -75,4 +75,17 @@
     .trailer video {
         max-width: 90%;
     }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+        width: 85%;
+    }
 }
