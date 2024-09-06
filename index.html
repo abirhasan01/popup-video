@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="banner">
         <div class="content">
             <img src="./img/1.jpg" alt="" width="300px">
             <h2>Video popup on Click | Javascript</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum impedit consequuntur porro est consequatur! Minima non incidunt accusantium exercitationem porro at, dolorum ratione, perspiciatis, velit impedit soluta sapiente assumenda enim?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum impedit consequuntur porro est consequatur!
+                Minima non incidunt accusantium exercitationem porro at, dolorum ratione, perspiciatis, velit impedit
+                soluta sapiente assumenda enim?</p>
             <a href="#" onclick=" toggle()">Watch Trailer</a>
         </div>
     </div>
     <div class="trailer">
-        <video src="./video/1.mp4" controls="true"></video>
-        <img class="close" src="./img/cls.webp" alt="">
+        <video class="vdo" src="./video/1.mp4" controls="true"></video>
+        <img onclick="closeTrailer()" class="close" src="./img/cls.webp" alt="">
     </div>
-     <script>
-        function toggle(){
+    <script>
+            var video = document.querySelector("video")
+        function toggle() {
             var trailer = document.querySelector(".trailer");
+            trailer.style.visibility = 'visible';
+            trailer.style.opacity = '1';
+            video.play();
+            video.currentTime = 0;
         }
-     </script>
+
+        function closeTrailer() {
+            var trailer = document.querySelector(".trailer");
+            trailer.style.visibility = 'hidden';
+            trailer.style.opacity = '0';
+            video.pause();
+        }
+    </script>
 </body>
+
 </html>
